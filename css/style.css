@@ -5,19 +5,19 @@
     --Robert: #c40c06ed;
     --Rony: #5cca13;
     --ISI-Dakar: #e616a7;
-    --primary: #6366f1;
+    --primary: #2491ea;
     --primary-dark: #4f46e5;
     --primary-light: #e0e7ff;
     --secondary: #10b981;
     --dark: #1f2937;
     --light: #f9fafb;
-    --gray: #6b7280;
+    --gray: #a8b8d7;
     --white: #ffffff;
     --black: #111827;
     --orange: #ef6109;
     --rouge: #e80a0a;
     --violet: #e218f8;
-  
+
     /*  Ombres */
     --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
     /* Border radius */
@@ -41,7 +41,7 @@
 
      /*::selection : Stylise le texte sélectionné par l'utilisateur( trouver dans le cour de selecteur avancer)-------------------------------------------  */
 /* C'est ce qui gere la selection */
-     ::selection { 
+ ::selection { 
   color: rgb(150, 13, 13);
     background-color: rgba(222, 68, 214, 0.441);
 }
@@ -53,12 +53,19 @@ body {
     color: var(--black);
     transition: var(--transition);
 }
+/* c'est lui qui est charger des petites pencarte = "experise","Processus simple","Ils nous font confiance" */
+.section-header .badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
 
 /* pour comprendre les "," il faut regarder la video "formulaire selecteur avancer, à 38:00" */
 h1, h2, h3, h4, .navbar-brand, .price { 
-    /* font-family: 'Space Grotesk', sans-serif; */
-    font-family: 'Courier New', Courier, monospace;
-    color: var(--orange);
+    font-family: 'Space Grotesk', sans-serif;
  }
  /* ========== NAVBAR ========== */
 /* .navbar { background: var(--white); transition: var(--transition); padding: 1rem 0; } */
@@ -74,17 +81,176 @@ h1, h2, h3, h4, .navbar-brand, .price {
     box-shadow: var(--shadow); 
 }
 .navbar-brand i, .step-icon, .category-card i, .value-card i { 
-    color: var(--primary); 
-   
+ color: var(--primary); 
 }
 /* rejoindre Afritalent */
 .btn-cta { border-radius: var(--radius); 
     padding: 0.5rem 1.5rem; 
     background-color: var(--primary);
 }
-/* ========== HERO ==========*/
+/* ========== HERO ===========================================================================================*/
 /* .hero {
     background: linear-gradient(135deg, var(--secondary), var(--primary-dark),var(--orange));
     color: white;
 } */
+ .hero {
+    background: linear-gradient(var(--primary));
+    color: white;
+}
+.hero-title { font-size: 3.5rem; 
+    font-weight: 800; 
+    margin-bottom: 1.5rem; 
+}
+/* (commit 5)@media (max-width: 768px) { 
+    .hero-title { font-size: 2rem; }  
+    }*/
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+.stat-number { 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+}
+/* ========== BENTO GRID ===================================================================================*/  
+.bento-grid {
+    background: var(--light);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* fr = fraction grid repartir au mieux les elements */
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+.bento-item {
+    background: rgb(211, 166, 228);
+    padding: 2rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    position:relative;
+    position:unset;
+    /* position:unset; = c'est ça qui fait apparaitre et disparaitre les chiffres  */
+}
+
+.bento-item:hover { transform: translateY(-5px); 
+    box-shadow: var(--shadow); 
+}
+/* effet Hover  */
+/* c'est ça qui assure le faite que les cartes bouge */
+
+.bento-premier {
+    grid-column: span 2; /*  grid-column = indique la forme ou l'espace que va prendre ce blog par rapport au autre */
+}
+.step-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    opacity: 0.5;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+/*  (commit 5)@media (max-width: 992px) { 
+    .bento-grid { grid-template-columns: repeat(2, 1fr); } 
+    .bento-large { grid-column: span 2; } 
+}
+@media (max-width: 768px) { 
+    .bento-grid { grid-template-columns: 1fr; } 
+    .bento-large { grid-column: span 1; } 
+} */
+
+
+/* ========== CATEGORIES ================================================================================================= */
+
+.categories { background: var(--light); padding: 4rem 0; }
+.category-card {
+    background: var(--gray);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    background: var(--primary);
+    color: white;
+}
+.category-card i { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* ========== TÉMOIGNAGES =========================================================================================================== */
+.testimonial-card {
+    text-align: center;
+    padding: 2rem;
+    /* background: var(--primary); */
+    background: linear-gradient(10deg, var(--secondary), var(--primary-dark));
+    color: #e0e7ff;
+    border-radius: var(--radius);
+}
+.testimonial-avatar { 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    /* La propriété CSS object-fit définit la façon dont le contenu d'un élément remplacé, tel qu'une <img> ou une <video>, doit être redimensionné pour s'adapter à son conteneur. */
+    margin-bottom: 1rem; 
+}
+.stars { 
+    color: #ff8c00; 
+    margin: 0.5rem 0; }
+/*=============================Prêt à rejoindre l'aventure AfriTalent ?=========================================================== */
+    .cta-section {
+    background: linear-gradient(10deg, var(--violet), var(--orange));
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+/* ========== CTA & FOOTER ========== */
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 4rem 0 1rem;
+}
+.social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+.social-links a, footer ul li a { color: var(--gray); transition: var(--transition); }
+.social-links a:hover, footer ul li a:hover { color: var(--primary); }
+footer ul { list-style: none; padding: 0; }
+footer ul li { margin-bottom: 0.5rem; }
+.copyright { text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+
+/* ========== CARTES ÉQUIPE & VALEURS ========== */
+.value-card, .team-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+.value-card i, .team-card i { font-size: 3rem; 
+    color: var(--primary); 
+    margin-bottom: 1rem; }
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.team-card .social { display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+
+
+
+
+ 
  
