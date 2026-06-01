@@ -34,7 +34,7 @@
     --white: #111827;
     --black: #f9fafb;
 } */
-
+ 
 * { margin: 0;
     padding: 0; 
     box-sizing: border-box;
@@ -101,9 +101,9 @@ h1, h2, h3, h4, .navbar-brand, .price {
     font-weight: 800; 
     margin-bottom: 1.5rem; 
 }
-/* (commit 5)@media (max-width: 768px) { 
+@media (max-width: 768px) { 
     .hero-title { font-size: 2rem; }  
-    }*/
+    }
 
 .hero-stats {
     display: grid;
@@ -146,25 +146,25 @@ h1, h2, h3, h4, .navbar-brand, .price {
     grid-column: span 2; /*  grid-column = indique la forme ou l'espace que va prendre ce blog par rapport au autre */
 }
 .step-number {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: var(--primary);
     opacity: 0.5;
-    position: absolute;
+    position: static;
     top: 1rem;
     right: 1rem;
 }
-/*  (commit 5)@media (max-width: 992px) { 
+ @media (max-width: 992px) { 
     .bento-grid { grid-template-columns: repeat(2, 1fr); } 
     .bento-large { grid-column: span 2; } 
 }
 @media (max-width: 768px) { 
     .bento-grid { grid-template-columns: 1fr; } 
     .bento-large { grid-column: span 1; } 
-} */
+}
 
 
-/* ========== CATEGORIES ================================================================================================= */
+/* ==========  Catégories de services  ================================================================================================= */
 
 .categories { background: var(--light); padding: 4rem 0; }
 .category-card {
@@ -232,6 +232,7 @@ footer ul li { margin-bottom: 0.5rem; }
     border-radius: var(--radius);
     transition: var(--transition);
 }
+/* Le "i" veut dire les icones boostrap icne */
 .value-card i, .team-card i { font-size: 3rem; 
     color: var(--primary); 
     margin-bottom: 1rem; }
@@ -239,6 +240,7 @@ footer ul li { margin-bottom: 0.5rem; }
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    /* La propriété CSS object-fit définit la façon dont le contenu d'un élément remplacé, tel qu'une <img> ou une <video>, doit être redimensionné pour s'adapter à son conteneur. */
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -247,10 +249,99 @@ footer ul li { margin-bottom: 0.5rem; }
     gap: 1rem; 
     margin-top: 1rem; 
 }
+/* ========== CHIFFRES CLÉS BENTO ========== */
+.bento-numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+.number-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light);
+    border-radius: var(--radius);
+}
+.number-card .number { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+@media (max-width: 768px) { 
+    .bento-numbers { grid-template-columns: repeat(2, 1fr); } 
+}
+@media (max-width: 576px) { 
+    .bento-numbers { grid-template-columns: 1fr; } 
+}
+/* ========== CONTACT-FORMULAIRE ========== */
+.contact-form-container, .contact-info {
+    background: linear-gradient(10deg, var(--violet), var(--orange));
+    /* background: var(--primary); */
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+.info-item { display: flex; 
+    gap: 1rem; 
+    margin-bottom: 1.5rem; }
+.info-item i { font-size: 1.5rem; color: 
+    var(--gray); }
+    /* il ne servent presque a rien */
+.error-message { 
+    color: #ef4444; 
+    font-size: 0.875rem; 
+    margin-top: 0.25rem; 
+    display: none; }
+.success-message {
+    background: var(--secondary);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-top: 1rem;
+    display: none;
+}
+.form-control.error { border-color: #ef4444; }
+.form-control.success { border-color: var(--secondary); }
+
+/* ========== CARTES FREELANCES ========== */
+/* .freelance-card {
+    transition: var(--transition);
+    border: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.freelance-card:hover { transform: translateY(-5px); 
+    box-shadow: var(--shadow); 
+}
+.freelance-card .card-img-top { height: 200px; 
+    object-fit: cover; 
+}
+.freelance-speciality { 
+    color: var(--primary); 
+    font-weight: 600; 
+}
+.freelance-rating { color: #fbbf24; } */
+/* 
+========== FILTRES & DIVERS ==========
+.filter-bar { display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 2rem 0; }
+.section-header { text-align: center; 
+    margin-bottom: 3rem; 
+}
+.section-header .badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+} 
+========== ANIMATIONS ==========
+.fade-up { opacity: 0; 
+    transform: translateY(30px); 
+    transition: all 0.6s ease; 
+}
+.fade-up.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
 
 
-
-
-
- 
- 

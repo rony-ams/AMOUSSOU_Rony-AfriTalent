@@ -28,9 +28,9 @@
               </a>
             </div>
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-stars"></i>
-                <span>AfriTalent</span>
+               <span>AfriTalent</span>
             </a>
+            <!-- il permet de masquer la navigation pour les petits ecran-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,7 +52,7 @@
             </div>
         </div>
     </nav>
-  <!-- Contenu principal -->
+  <!--===================================================== Contenu principal =================================================================-->
   <main class="pt-5 mt-5">
         <!-- Notre Histoire -->
         <section class="history py-5">
@@ -71,6 +71,7 @@
         </section>
 
         <!-- Nos valeurs -->
+       
         <section class="values py-5 bg-light">
             <div class="container">
                 <div class="section-header text-center">
@@ -82,7 +83,7 @@
                         <div class="value-card">
                             <i class="bi bi-lightbulb"></i>
                             <h3>Innovation</h3>
-                            <p>Nous innovons constamment pour offrir la meilleure expérience utilisateur.</p>
+                            <p>Nous innovons  pour offrir la meilleure expérience utilisateur.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -112,7 +113,7 @@
 
         <!-- Chiffres clés en Bento Grid -->
         <section class="key-numbers py-5">
-            <div class="container">
+            <div class="container1">
                 <div class="section-header text-center">
                     <h2>Chiffres clés</h2>
                     <p>La croissance d'AfriTalent en quelques chiffres</p>
@@ -139,7 +140,7 @@
                             <!-- <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Membre équipe"> -->
                               <img src="images/logo1.png" class="rounded" alt="Membre équipe" width="100vh" height="100vh" >
                             <h3>Fatou </h3>
-                            <p>CEO & Fondatrice</p>
+                            <p>Directrice</p>
                             <div class="social"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div>
                         </div>
                     </div>
@@ -147,7 +148,7 @@
                         <div class="team-card">
                              <img src="images/elfal.jpg" class="rounded" alt="Membre équipe" width="100vh" height="100vh" >
                             <h3>Wili</h3>
-                            <p>CTO</p>
+                            <p>Codeur</p>
                             <div class="social"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a></div>
                         </div>
                     </div>
@@ -155,7 +156,7 @@
                         <div class="team-card">
                               <img src="images/elfatou.jpg" class="rounded" alt="Membre équipe" width="100vh" height="100vh" >
                             <h3>Aïcha </h3>
-                            <p>Head of Community</p>
+                            <p>Desiner</p>
                             <div class="social"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div>
                         </div>
                     </div>
@@ -163,7 +164,7 @@
                         <div class="team-card">
                              <img src="images/logo3.png" class="rounded" alt="Membre équipe" width="100vh" height="100vh" >
                             <h3>Joe</h3>
-                            <p>Lead Developer</p>
+                            <p>Developer</p>
                             <div class="social"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a></div>
                         </div>
                     </div>
@@ -181,14 +182,16 @@
                         <span>AfriTalent</span>
                     </div>
                     <p>La première plateforme de mise en relation entre freelances tech et entreprises en Afrique.</p>
-                     <a href="http://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
+                    <div class="social-links">
+                        <a href="http://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
                         <a href="http://www.twitter.com"><i class="bi bi-twitter-x"></i></a>
                         <a href="http://www.facebook.com"><i class="bi bi-facebook"></i></a>
                         <a href="http://www.instagram.com"><i class="bi bi-instagram"></i></a>
+                    </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4>Liens utiles</h4>
-                     <ul class="list-unstyled">
+                    <ul class="list-unstyled">
                         <li><a href="about.html">À propos</a></li>
                         <li><a href="contact.html">Blog</a></li>
                         <li><a href="freelances.html">Devenir freelance</a></li>
@@ -206,17 +209,25 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4>Contact</h4>
-                    <ul class="list-unstyled"><li><i class="bi bi-envelope"></i> contact@afritalent.com</li><li><i class="bi bi-telephone"></i> +221 33 123 45 67</li><li><i class="bi bi-geo-alt"></i> Dakar, Sénégal</li></ul>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope"></i> contact@afritalent.com</li>
+                        <li><i class="bi bi-telephone"></i> +221 33 123 45 67</li>
+                        <li><i class="bi bi-geo-alt"></i> Dakar, Sénégal</li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright"><p>&copy; <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p></div>
+            <div class="copyright">
+                <p><i class="bi bi-c-square"></i><span id="currentYear"></span> AfriTalent. Tous droits réservés.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Bouton retour en haut -->
+    <!-- <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button> -->
 
-    <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button>
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
 </html>

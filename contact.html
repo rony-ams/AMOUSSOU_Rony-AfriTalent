@@ -27,9 +27,9 @@
               </a>
             </div>
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-stars"></i>
-                <span>AfriTalent</span>
+              <span>AfriTalent</span>
             </a>
+            <!-- il permet de masquer la navigation pour les petits ecran-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,6 +51,7 @@
             </div>
         </div>
     </nav>
+    <!-- ===================  main ================================= -->
      <main class="pt-5 mt-5">
         <div class="container py-5">
             <div class="row">
@@ -61,9 +62,10 @@
                         <form id="contactForm">
                             <div class="row">
                                 <!-- placeholder="ex. Mike rebobinaldo" permet de mettre quoi mettre, selecteur avancer---------------------------------------------------------- -->
+                                 <!-- required = c'est lui qui oblige a remplir avant d'envoyer; il met meme un message -->
                                 <div class="col-md-6 mb-3">
                                     <label for="nom" class="form-label">Nom *</label>
-                                    <input type="text" class="form-control" id="nom" required placeholder="ex: AMOUSSOU">
+                                    <input type="text" class="form-control" id="nom" required placeholder="ex: AMOUSSOU"> 
                                     <div class="error-message" id="nomError"></div>
                                 </div>
                                 <div class="col-md-6 mb-3">
@@ -94,12 +96,12 @@
                                 <textarea class="form-control" id="message" rows="5" required></textarea>
                                 <div class="error-message" id="messageError"></div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                            <button type="submit" class="btn btn-info">Envoyer le message</button>
                             <div id="formSuccess" class="success-message"></div>
                         </form>
                     </div>
                 </div>
-
+                
                 <!-- Informations de contact -->
                 <div class="col-lg-5">
                     <div class="contact-info">
@@ -127,7 +129,7 @@
         </div>
     </main>
 
-    <footer>
+     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3">
@@ -136,14 +138,16 @@
                         <span>AfriTalent</span>
                     </div>
                     <p>La première plateforme de mise en relation entre freelances tech et entreprises en Afrique.</p>
-                     <a href="http://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
+                    <div class="social-links">
+                        <a href="http://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
                         <a href="http://www.twitter.com"><i class="bi bi-twitter-x"></i></a>
                         <a href="http://www.facebook.com"><i class="bi bi-facebook"></i></a>
                         <a href="http://www.instagram.com"><i class="bi bi-instagram"></i></a>
+                    </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4>Liens utiles</h4>
-                     <ul class="list-unstyled">
+                    <ul class="list-unstyled">
                         <li><a href="about.html">À propos</a></li>
                         <li><a href="contact.html">Blog</a></li>
                         <li><a href="freelances.html">Devenir freelance</a></li>
@@ -161,17 +165,25 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h4>Contact</h4>
-                    <ul class="list-unstyled"><li><i class="bi bi-envelope"></i> contact@afritalent.com</li><li><i class="bi bi-telephone"></i> +221 33 123 45 67</li><li><i class="bi bi-geo-alt"></i> Dakar, Sénégal</li></ul>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope"></i> contact@afritalent.com</li>
+                        <li><i class="bi bi-telephone"></i> +221 33 123 45 67</li>
+                        <li><i class="bi bi-geo-alt"></i> Dakar, Sénégal</li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright"><p>&copy; <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p></div>
+            <div class="copyright">
+                <p><i class="bi bi-c-square"></i><span id="currentYear"></span> AfriTalent. Tous droits réservés.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Bouton retour en haut -->
+    <!-- <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button> -->
 
-    <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button>
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
