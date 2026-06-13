@@ -27,14 +27,19 @@
 }
 /* transition: le temps que l'element va prendre pour se manifester (bien revoir encore)------------------------------------------------------ */
 /* DARK MODE Commit 6 ========================================= */
-/* [data-theme="dark"] {
+[data-theme="dark"] {
     --primary: #818cf8;
     --dark: #f9fafb;
     --light: #1f2937;
     --white: #111827;
     --black: #f9fafb;
-} */
- 
+}
+[data-theme="dark"] footer {
+    background: #1f2937 !important;
+    color: white !important;
+}
+/* Cette ligne force le footer à garder ses couleurs d'origine (fond sombre et texte blanc) même quand tu actives le mode sombre.
+Le !important est essentiel car il force le style à s'appliquer malgré les changements du dark mode. */
 * { margin: 0;
     padding: 0; 
     box-sizing: border-box;
@@ -94,7 +99,8 @@ h1, h2, h3, h4, .navbar-brand, .price {
     color: white;
 } */
  .hero {
-    background: linear-gradient(var(--primary));
+    /* background: linear-gradient(var(--primary)); */
+    background: linear-gradient(135deg, var(--secondary), var(--primary-dark),var(--orange));
     color: white;
 }
 .hero-title { font-size: 3.5rem; 
@@ -224,6 +230,98 @@ footer ul { list-style: none; padding: 0; }
 footer ul li { margin-bottom: 0.5rem; }
 .copyright { text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
 
+
+/*====Freelance ==============================  */
+/* FILTRES */
+.filter-btn {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+.filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; }
+#freelanceGrid{ margin-top: 1.5rem;}
+/* CARTES */
+.freelance-card { margin-bottom: 1.5rem; }
+.freelance-card .card { border: none; border-radius: var(--radius); overflow: hidden; transition: 0.3s; background: white; height: 100%; }
+.freelance-card .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.card-img-top { height: 200px; object-fit: cover; width: 100%; }
+.card-body { padding: 1.5rem; }
+.card-title { font-family: var(--heading); font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem; }
+.specialty { color: var(--primary); font-weight: 600; font-size: 0.875rem; margin-bottom: 0.75rem; }
+.card-text { color: var(--gray); font-size: 0.875rem; margin-bottom: 1rem; }
+.rate-info { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); }
+.hourly-rate { font-weight: 700; font-size: 1.25rem; color: var(--primary); }
+.rating { color: #fbbf24; font-weight: 600; }
+/* BOUTONS */
+.btn-outline-primary { border: 2px solid var(--primary); background: transparent; color: var(--primary); padding: 0.5rem 1rem; border-radius: 50px; transition: 0.3s; font-weight: 600; }
+.btn-outline-primary:hover { background: var(--primary); color: white; }
+.btn-primary { background: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 50px; color: white; font-weight: 600; transition: 0.3s; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+
+/* ========== BOUTON RETOUR HAUT ========== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 75%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    transition: var(--transition);
+}
+.back-to-top:hover { 
+    background: var(--primary-dark); 
+    transform: translateY(-3px); /* voir a quoi ça sert-----------------------  */
+}
+
+/* Grille responsive : 3 colonnes desktop, 2 tablette, 1 mobile */
+/* ========== CARTES TARIFS ========== */
+.pricing-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    position: relative;
+}
+/* .pricing-card.featured { 
+    transform: scale(1.05); 
+    border: 2px solid var(--primary); } */
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);/* voir a quoi ça sert-----------------------  */
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+}
+.price { font-size: 2.5rem; 
+    font-weight: 800; 
+    margin: 1rem 0; 
+}
+.pricing-card ul { list-style: none; 
+    padding: 0; 
+    text-align: left; 
+    margin: 1.5rem 0; }
+.pricing-card ul li { margin: 0.75rem 0; }
+.bi-check-circle-fill { color: var(--secondary); }
+.bi-x-circle-fill { color: var(--gray); }
+
 /* ========== CARTES ÉQUIPE & VALEURS ========== */
 .value-card, .team-card {
     text-align: center;
@@ -297,7 +395,7 @@ footer ul li { margin-bottom: 0.5rem; }
 }
 .form-control.error { border-color: #ef4444; }
 .form-control.success { border-color: var(--secondary); }
-
+ 
 /* ========== CARTES FREELANCES ========== */
 /* .freelance-card {
     transition: var(--transition);

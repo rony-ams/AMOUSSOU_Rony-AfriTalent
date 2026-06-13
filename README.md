@@ -7,6 +7,13 @@ Auteur : Rony AMOUSSOU
 Promotion : L1 DSBD — ISI
 
 
+
+<!-- ******* -->
+## A dire le jour de l'exposer
+-il faut toujour mettre  la balise "script" avant la fin de body parce l'execution du javascript non seulement peut prendre du temps, mais peux contenir des erreur qui vont bloquer le site.
+<!-- ******* -->
+
+
 .{propriété}-{modificateur}-{valeur} = .fs-3 .fs-md-2
 font-weight or font-style = 
 <!-- ==== -->
@@ -86,6 +93,148 @@ Dans le cas d’une copie par valeur, si vous modifiez la valeur d’une des deu
 <!-- ******* -->
 
 <!-- ******* -->
+.lenght = la taille d'un tableau
+.push() = ajout
+.pop() = supprime
+Sont tous des methodes.
+<!-- ******* -->
+
+<!-- ******* -->
+Array = tableau
+<!-- ******* -->
+
+<!-- ******* -->
+Notez bien également la différence entre  =  et  ===  :
+
+a = 42 signifie que l’on met la valeur 42 dans la variable a ; 
+
+a === 42 signifie que l’on compare la valeur a et la valeur 42, pour savoir si ce sont les mêmes ou pas
+<!-- ******* -->
+
+<!-- ******* -->
+## JS ( objet; clée:valeur)
+<!-- ******* -->
+
+<!-- ******* -->
+DOM (Document Object Model)
+<!-- ******* -->
+
+<!-- ******* -->
+Chaque nœud de cet arbre DOM (header, main, div…) est un objet HTMLElement. Pour le dire autrement, JavaScript a regroupé dans un même objet deux choses : 
+les informations sur cet objet (son nom, son id, sa position, etc.) : ce sont les propriétés de l’objet ;
+ce que cet objet est capable de faire (réagir au clic, par exemple) : ce sont les méthodes. 
+<!-- ******* -->
+
+<!-- ******* -->
+on utilise getElementsbyID = quant l'element a un ID
+<!-- ******* -->
+
+<!-- ******* -->
+${} = l’interpolation
+<!-- ******* -->
+
+<!-- ******* -->
+## innerHTML = proprité
+// innerHTML permet d'insérer,de lire, ou de remplacer du contenu (texte ou code HTML) à l'intérieur d'un élément
+<!-- ******* -->
+
+<!-- ******* -->
+// ${} = interpolation (``) =permet d'ecrire du code HTML directement en JAVASCRIPT
+<!-- ******* -->
+
+<!-- ******* -->
+function () = ce type de fonction est appeler 'Fonction Anonyme' Elle est créée au moment où nous faisons notre addEventListener.
+<!-- ******* -->
+
+<!-- ******* -->
+# fonction simple
+  monBouton.addEventListener("click", function () {
+        console.log("...")
+    });
+<!-- ******* -->
+# fonction flecher
+monBouton.addEventListener("click", () => {
+    console.log("...")
+});
+# c'est juste des ecriture
+<!-- ******* -->
+# Value
+    // Value permet de recuperer la valeur que l'utilisateur a saisie
+<!-- ******* -->
+
+<!-- ******* -->
+<script src="film.js" defer></script> defer dit au JAVAscript de faire l'HTML d'abord
+<!-- ******* -->
+
+<!-- ******* -->
+<form>
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Votre email" required>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+    <input type="submit" value="Envoyer">
+</form>
+# Les balises labels
+Les balises labels servent à indiquer un texte, lié au champ que l’utilisateur va devoir remplir. 
+
+# Les balises input
+Les balises input (“entrée”, en français) forment le cœur des formulaires. Elles permettent à l’utilisateur de saisir des données. D’ailleurs, nous en avons déjà utilisé une dans notre projet. Eh oui, rappelez-vous, c’est grâce à cela que le joueur peut maintenant saisir le mot qu’il doit recopier.
+<!-- ******* -->
+
+<!-- ******* -->
+# trim()
+ supprime les espaces "autour" du texte ,pas à l'interieur(avant la première lettre et après la dernière lettre)
+ C’est pourquoi la bonne pratique consiste à nettoyer les champs avant de les tester. En utilisant la méthode trim(), vous pouvez ainsi nettoyer le champ et supprimer automatiquement les espaces et autres tabulations autour de la chaîne à tester !
+<!-- ******* -->
+
+<!-- ******* -->
+# Value
+  permet de récupérer (ou de modifier) la valeur d'un élément de formulaire
+
+<!-- ******* -->
+# si (condition) est vrai "?" fait (condition) sinon fait ":" (condition)
+<!-- ******* -->
+
+<!-- ******* -->
+# const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/   ou “Regular Expression”
+Ce code est une expression régulière (regex) qui sert à valider une adresse email.
+/   = Délimite le début et la fin de l'expression régulière
+^   = Début de la chaîne (rien avant)
+[^\s@] = Un caractère qui n'est PAS (^ à l'intérieur des crochets) un espace (\s) ni un @
++   = Le caractère précédent doit apparaître 1 fois ou plus
+@   = Le caractère littéral @
+[^\s@]+ = Encore un ou plusieurs caractères qui ne sont ni espace ni @
+\.  = Un point littéral (le \ échappe le point)
+[^\s@]+	Encore un ou plusieurs caractères (le domaine : .com, .fr, etc.)
+$   =  Fin de la chaîne rien après
+
+La chaîne doit :
+Commencer par un ou plusieurs caractères (sans espace ni @)
+Puis un @
+Puis un ou plusieurs caractères (sans espace ni @)
+Puis un point .
+Puis un ou plusieurs caractères (sans espace ni @)
+Et se terminer immédiatement après
+<!-- ******* -->
+
+<!-- ******* -->
+# .join('')
+ sert à transformer un tableau en une seule chaîne de texte (une seule string).
+
+<!-- ******* -->
+
+<!-- ******* -->
+<!-- ******* -->
+
+<!-- ******* -->
+<!-- ******* -->
+
+<!-- ******* -->
+<!-- ******* -->
+<!-- ******* -->
+
 <!-- ******* -->
 
 <!-- ******* -->
@@ -109,7 +258,7 @@ Dans le cas d’une copie par valeur, si vous modifiez la valeur d’une des deu
 <!-- ******* -->
 <!-- ******* -->
 
-<!-- ******* -->
-<!-- ******* -->
+
+
 
 

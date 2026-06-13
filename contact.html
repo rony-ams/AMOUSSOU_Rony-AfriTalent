@@ -43,9 +43,9 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex gap-2">
-                    <!-- <button class="btn btn-outline-primary" id="darkModeToggle">
+                    <button class="btn btn-outline-primary" id="darkModeToggle">
                         <i class="bi bi-moon"></i>
-                    </button> (Commit 6 avec javascript*******) -->
+                    </button> 
                     <a href="contact.html" class="btn btn-primary btn-cta">Rejoindre AfriTalent</a>
                 </div>
             </div>
@@ -64,6 +64,7 @@
                                 <!-- placeholder="ex. Mike rebobinaldo" permet de mettre quoi mettre, selecteur avancer---------------------------------------------------------- -->
                                  <!-- required = c'est lui qui oblige a remplir avant d'envoyer; il met meme un message -->
                                 <div class="col-md-6 mb-3">
+                                    <!-- Le "for" dans l'attribut for des balises <label> sert à lier explicitement une étiquette à un champ de formulaire. La valeur de for doit être identique à la valeur de l'attribut id du champ associé.-->
                                     <label for="nom" class="form-label">Nom *</label>
                                     <input type="text" class="form-control" id="nom" required placeholder="ex: AMOUSSOU"> 
                                     <div class="error-message" id="nomError"></div>
@@ -179,7 +180,7 @@
     </footer>
 
     <!-- Bouton retour en haut -->
-    <!-- <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button> -->
+    <button id="backToTop" class="back-to-top"><i class="bi bi-arrow-up"></i></button>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
