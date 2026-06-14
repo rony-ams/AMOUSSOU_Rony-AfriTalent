@@ -26,7 +26,7 @@
     --transition: all 0.3s ease;
 }
 /* transition: le temps que l'element va prendre pour se manifester (bien revoir encore)------------------------------------------------------ */
-/* DARK MODE Commit 6 ========================================= */
+
 [data-theme="dark"] {
     --primary: #818cf8;
     --dark: #f9fafb;
@@ -133,7 +133,8 @@ h1, h2, h3, h4, .navbar-brand, .price {
     margin: 3rem 0;
 }
 .bento-item {
-    background: rgb(211, 166, 228);
+    /* background: var(--gray); */
+    background: linear-gradient(10deg, var(--light), var(--primary));
     padding: 2rem;
     border-radius: var(--radius);
     transition: var(--transition);
@@ -174,7 +175,9 @@ h1, h2, h3, h4, .navbar-brand, .price {
 
 .categories { background: var(--light); padding: 4rem 0; }
 .category-card {
-    background: var(--gray);
+    /* background: var(--gray); */
+    background: linear-gradient(10deg, var(--primary), var(--light));
+
     padding: 1.5rem;
     border-radius: var(--radius);
     text-align: center;
@@ -288,7 +291,10 @@ footer ul li { margin-bottom: 0.5rem; }
 /* Grille responsive : 3 colonnes desktop, 2 tablette, 1 mobile */
 /* ========== CARTES TARIFS ========== */
 .pricing-card {
-    background: var(--white);
+    /* background: var(--white); */
+       background: linear-gradient(10deg, var(--light), var(--ISI-Dakar));
+
+
     border-radius: var(--radius);
     padding: 2rem;
     text-align: center;
@@ -326,14 +332,16 @@ footer ul li { margin-bottom: 0.5rem; }
 .value-card, .team-card {
     text-align: center;
     padding: 2rem;
-    background: var(--white);
+    background: linear-gradient(10deg, var(--ISI-Dakar), var(--violet));
+    /* background: var(--white); */
     border-radius: var(--radius);
     transition: var(--transition);
 }
 /* Le "i" veut dire les icones boostrap icne */
 .value-card i, .team-card i { font-size: 3rem; 
     color: var(--primary); 
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+ }
 .team-card img {
     width: 150px;
     height: 150px;
@@ -357,8 +365,9 @@ footer ul li { margin-bottom: 0.5rem; }
 .number-card {
     text-align: center;
     padding: 2rem;
-    background: var(--light);
+    background: var(--primary-light);
     border-radius: var(--radius);
+
 }
 .number-card .number { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
 @media (max-width: 768px) { 
@@ -369,10 +378,9 @@ footer ul li { margin-bottom: 0.5rem; }
 }
 /* ========== CONTACT-FORMULAIRE ========== */
 .contact-form-container, .contact-info {
-    background: linear-gradient(10deg, var(--violet), var(--orange));
-    /* background: var(--primary); */
-    padding: 2rem;
-    border-radius: var(--radius);
+   background: linear-gradient(10deg, var(--gray), var(--primary));
+   padding: 2rem;
+   border-radius: var(--radius);
 }
 .info-item { display: flex; 
     gap: 1rem; 
@@ -397,7 +405,7 @@ footer ul li { margin-bottom: 0.5rem; }
 .form-control.success { border-color: var(--secondary); }
  
 /* ========== CARTES FREELANCES ========== */
-/* .freelance-card {
+.freelance-card {
     transition: var(--transition);
     border: none;
     border-radius: var(--radius);
@@ -414,8 +422,8 @@ footer ul li { margin-bottom: 0.5rem; }
     font-weight: 600; 
 }
 .freelance-rating { color: #fbbf24; } */
-/* 
-========== FILTRES & DIVERS ==========
+
+/* ========== FILTRES & DIVERS ========== */
 .filter-bar { display: flex; 
     gap: 1rem; 
     align-items: center; 
@@ -432,10 +440,10 @@ footer ul li { margin-bottom: 0.5rem; }
     display: inline-block;
     margin-bottom: 1rem;
 } 
-========== ANIMATIONS ==========
+/* ========== ANIMATIONS ========== */
 .fade-up { opacity: 0; 
     transform: translateY(30px); 
-    transition: all 0.6s ease; 
+    transition: all 1s ease; 
 }
 .fade-up.visible { 
     opacity: 1; 
