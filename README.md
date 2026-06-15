@@ -6,13 +6,71 @@ Auteur : Rony AMOUSSOU
 
 Promotion : L1 DSBD — ISI
 
+<!-- ******* -->
+# document.getElementById() = selectionne dans le HTML
+# document.querySelector(#id;.classe) = selectionne dans le CSS ; lui il ne selectionne que le premier qu'il trouve, donc un seul.  
+# document.querySelectorALL() = pour plusieurs elements 
+<!-- ******* -->
 
+<!-- ******* -->
+getAttribut = permet de selctionner un attribut; faire une selection dans une selection
+<!-- ******* -->
+
+<!-- ******* -->
+# getAttribute = (lit juste la valeur d'un attribut sur un élément déjà sélectionné); 
+# setAttribute = change ou modifie dans ce champs (set= setting)
+
+<!-- ******* -->
+
+<!-- ******* -->
+il faut toujour mettre le header, sinon votre fichier ne va pas apparaitre
+<!-- ******* -->
+
+<!-- ******* -->
+Quant on met une "img" dans l'HTML les valeurs ne prennent pas d'unite ❌ "px" "vh"
+<!-- ******* -->
+
+<!-- ******* -->
+# en JS tout est objet et objet eest un type.
+<!-- ******* -->
+
+inner
+<!-- ******* -->
+# Javascript = est un langage a typage dynamique. Vous n'avez pas a precser les types de donnee, c'est grace a la valeur que vous aller lui donner, qu'il va automatiquement determiner le type de la variable. 
+Donc vous mettez "let"+"le nom de la variable"+"ça valeur"
+<!-- ******* -->
 
 <!-- ******* -->
 ## A dire le jour de l'exposer
 -il faut toujour mettre  la balise "script" avant la fin de body parce l'execution du javascript non seulement peut prendre du temps, mais peux contenir des erreur qui vont bloquer le site.
 <!-- ******* -->
 
+<!-- ******* -->
+# console.log = est une fonction qui permet de faire l'affichage
+<!-- ******* -->
+
+<!-- ******* -->
+Let = conseiller,car il les variable de maniere local 
+var = conseiller,car il les variable de maniere global(probleme de securite),et il est anciens
+
+<!-- ******* -->
+#  == (comparaison en valeur)    2=='2' (true)
+# ===   (comparaison en type)    2==='2' (false)
+<!-- ******* -->
+
+<!-- ******* -->
+# le DOM est un interface de programation (API) un intermediaire entre deux applications qui fonctionne
+Donc le DOM est l'API entre l'html et le JAVAscript
+<!-- ******* -->
+
+<!-- ******* -->
+# document. est de type objet
+getelementbyID() est une methode qui permet de recuperer; 
+# et une methode est une fonction
+<!-- ******* -->
+<!-- ******* -->
+<!-- ******* -->
+<!-- ******* -->
 
 .{propriété}-{modificateur}-{valeur} = .fs-3 .fs-md-2
 font-weight or font-style = 
@@ -136,6 +194,7 @@ ${} = l’interpolation
 <!-- ******* -->
 ## innerHTML = proprité
 // innerHTML permet d'insérer,de lire, ou de remplacer du contenu (texte ou code HTML) à l'intérieur d'un élément
+innerHTML = permet d'executer des balises
 <!-- ******* -->
 
 <!-- ******* -->

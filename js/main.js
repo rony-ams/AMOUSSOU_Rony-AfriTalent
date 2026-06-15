@@ -9,16 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
    // innerHTML permet d'insérer,de lire, ou de remplacer du contenu (texte ou code HTML) à l'intérieur d'un élément
     // Appliquer le thème sauvegardé
     if (currentTheme === 'dark') {
+     // document.documentElement.setAttribute('data-theme' = attribut,'dark' = valeur); il ajoute ou mdifie
         document.documentElement.setAttribute('data-theme', 'dark');
         darkModeToggle.innerHTML = '<i class="bi bi-moon-stars"></i>';
     }
     
     darkModeToggle.addEventListener('click', function() {
         if (document.documentElement.getAttribute('data-theme') === 'dark') {
-            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.removeAttribute('data-theme'); // remove supprime
             localStorage.setItem('theme', 'light');
             darkModeToggle.innerHTML = `<i class="bi bi-moon-stars"></i>`;
         } else {
+         // document.documentElement.setAttribute('data-theme' = attribut,'dark' = valeur);
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
             darkModeToggle.innerHTML = '<i class="bi bi-brightness-high-fill"></i>';
@@ -30,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cela veut dire : window = fenetre "Écoute la fenêtre, et quand l'utilisateur scrolle, exécute cette fonction"
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
+            navbar.classList.add('navbar-scrolled');//classList.add ajout d'une nouvelle classe
         } else {
-            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.remove('navbar-scrolled');//classList.remove ajout d'une nouvelle classe
         }
     });
     // ========== 3. COMPTEURS ANIMÉS avec IntersectionObserver ================================================================================
@@ -114,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: "Joe", speciality: "Marketing Digital", category: "marketing", rate: "65.000fr/h", rating: 4.6, bio: "Spécialiste en design et vente", img: "images/elfal.jpg" },
         { name: "Fofo", speciality: "DevOps Engineer", category: "devops", rate: "80.000fr/h", rating: 4.9, bio: "Expert en tracage cybercriminel", img: "images/elfatou.jpg" },
         { name: "Bernard", speciality: "Rédactrice Tech", category: "redaction", rate: "90.000fr/h", rating: 4.7, bio: "Rédaction d'articles techniques ", img: "images/elfatou.jpg" },
-        { name: "Mamadou Sarr", speciality: "Développeur Backend", category: "web", rate: "98.000fr/h", rating: 4.8, bio: "Spécialiste Python et Django", img: "images/elfatou.jpg" },
+        { name: "Mamadou Sarr", speciality: "Développeur Backend", category: "web", rate: "98.000fr/h", rating: 4.8, bio: "Spécialiste Python et Anaconda", img: "images/elfatou.jpg" },
         { name: "Ndeye Ndiaye", speciality: "UI Designer", category: "design", rate: "78.000fr/h", rating: 4.8, bio: "Création d'interfaces utilisateur innovantes", img: "images/elfatou.jpg" },
         { name: "Cheikh Diagne", speciality: "Data Analyst", category: "data", rate: "88.000fr/h", rating: 4.5, bio: "Analyse de données et visualisation", img: "images/elfatou.jpg" }
     ];
@@ -240,8 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(input, errorId, message) {
-        input.classList.add('error');
-        input.classList.remove('success');
+        input.classList.add('error'); //  classList.add ajout d'une nouvelle classe
+        input.classList.remove('success');//classList.remove ajout d'une nouvelle classe
         const errorDiv = document.getElementById(errorId);
         errorDiv.textContent = message;
         errorDiv.style.display = 'block';
@@ -249,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function showSuccess(input, errorId) {
         input.classList.remove('error');
-        input.classList.add('success');
+        input.classList.add('success'); // ajout d'une nouvelle classe
         const errorDiv = document.getElementById(errorId);
         errorDiv.style.display = 'none';
     }

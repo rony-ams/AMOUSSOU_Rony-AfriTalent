@@ -227,7 +227,7 @@ footer {
     padding: 4rem 0 1rem;
 }
 .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
-.social-links a, footer ul li a { color: var(--gray); transition: var(--transition); }
+.social-links a, footer ul li a { color: var(--primary); transition: var(--transition);  text-decoration: none; }
 .social-links a:hover, footer ul li a:hover { color: var(--primary); }
 footer ul { list-style: none; padding: 0; }
 footer ul li { margin-bottom: 0.5rem; }
@@ -291,10 +291,7 @@ footer ul li { margin-bottom: 0.5rem; }
 /* Grille responsive : 3 colonnes desktop, 2 tablette, 1 mobile */
 /* ========== CARTES TARIFS ========== */
 .pricing-card {
-    /* background: var(--white); */
-       background: linear-gradient(10deg, var(--light), var(--ISI-Dakar));
-
-
+    background: linear-gradient(10deg, var(--light), var(--ISI-Dakar));
     border-radius: var(--radius);
     padding: 2rem;
     text-align: center;
@@ -302,9 +299,7 @@ footer ul li { margin-bottom: 0.5rem; }
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
     position: relative;
 }
-/* .pricing-card.featured { 
-    transform: scale(1.05); 
-    border: 2px solid var(--primary); } */
+
 .popular-badge {
     position: absolute;
     top: -12px;
