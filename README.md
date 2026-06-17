@@ -318,6 +318,6 @@ Et se terminer immédiatement après
 <!-- ******* -->
 
 
-
+![captured'ecran](images/Capture%20d'écran%202026-06-16%20092627.png)
 
 

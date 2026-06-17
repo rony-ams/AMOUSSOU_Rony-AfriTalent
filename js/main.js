@@ -110,15 +110,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // ========== 6. FILTRAGE DYNAMIQUE DES FREELANCES ==========
     const freelancesData = [
-        { name: "Mahunan", speciality: "Développeur Full Stack", category: "web", rate: "57.000fr/h", rating: 4.8, bio: "Assistant junior au codage des PNJ de GTA6", img: "images/elfatou.jpg" },
-        { name: "Sy", speciality: "UI/UX Designer", category: "design", rate: "64.000fr/h", rating: 4.9, bio: "Designer passionnée par les interfaces modernes", img: "images/eleve.jpg" },
-        { name: "Ibrahim ", speciality: "Data Scientist", category: "data", rate: "44.000fr/h", rating: 4.7, bio: "Expert en Machine Learning et Big Data", img: "images/eleve2.jpg" },
+        { name: "Mahunan", speciality: "Développeur Full Stack", category: "web", rate: "57.000fr/h", rating: 4.8, bio: "Assistante junior au codage des PNJ de GTA6", img: "images/confident-business-woman-portrait-smiling-face (1).jpg" },
+        { name: "Bintou", speciality: "UI/UX Designer", category: "design", rate: "64.000fr/h", rating: 4.9, bio: "Designer passionnée par les interfaces modernes", img: "images/portrait-young-woman-smiling-isolated.jpg" },
+        { name: "Ibrahim ", speciality: "Data Scientist", category: "data", rate: "44.000fr/h", rating: 4.7, bio: "Expert en Machine Learning et Big Data", img: "images/african-american-man-wearing-round-glasses-denim-shirt.jpg" },
         { name: "Joe", speciality: "Marketing Digital", category: "marketing", rate: "65.000fr/h", rating: 4.6, bio: "Spécialiste en design et vente", img: "images/elfal.jpg" },
-        { name: "Fofo", speciality: "DevOps Engineer", category: "devops", rate: "80.000fr/h", rating: 4.9, bio: "Expert en tracage cybercriminel", img: "images/elfatou.jpg" },
-        { name: "Bernard", speciality: "Rédactrice Tech", category: "redaction", rate: "90.000fr/h", rating: 4.7, bio: "Rédaction d'articles techniques ", img: "images/elfatou.jpg" },
-        { name: "Mamadou Sarr", speciality: "Développeur Backend", category: "web", rate: "98.000fr/h", rating: 4.8, bio: "Spécialiste Python et Anaconda", img: "images/elfatou.jpg" },
-        { name: "Ndeye Ndiaye", speciality: "UI Designer", category: "design", rate: "78.000fr/h", rating: 4.8, bio: "Création d'interfaces utilisateur innovantes", img: "images/elfatou.jpg" },
-        { name: "Cheikh Diagne", speciality: "Data Analyst", category: "data", rate: "88.000fr/h", rating: 4.5, bio: "Analyse de données et visualisation", img: "images/elfatou.jpg" }
+        { name: "Fifi", speciality: "DevOps Engineer", category: "devops", rate: "80.000fr/h", rating: 4.9, bio: "Experte en tracage cybercriminel", img: "images/portrait-delighted-happy-diligent-female-student-with-dark-skin-keeps-hands-crossed-being-confident-passing-exam-successfully.jpg" },
+        { name: "Bernard", speciality: "Rédactrice Tech", category: "redaction", rate: "90.000fr/h", rating: 4.7, bio: "Rédaction d'articles techniques ", img: "images/i-know-exactly-what-i-want-headshot-attractive-young-african-american-student-stylish-glasses-having-serious-calm-face-expression-feeling-confident-about-his-future-plans-career.jpg" },
+        { name: "Astou Sarr", speciality: "Développeur Backend", category: "web", rate: "98.000fr/h", rating: 4.8, bio: "Spécialiste Python et Anaconda", img: "images/people-showing-support-respect-with-yellow-background-suicide-prevention-day.jpg" },
+        { name: "Ndeye Ndiaye", speciality: "UI Designer", category: "design", rate: "78.000fr/h", rating: 4.8, bio: "Création d'interfaces utilisateur innovantes", img: "images/smiling-african-american-girl-brown-tshirt.jpg" },
+        { name: "Asi Diagne", speciality: "Data Analyst", category: "data", rate: "88.000fr/h", rating: 4.5, bio: "Analyse de données et visualisation", img: "images/elfatou.jpg" }
     ];
  
     const freelancesGrid = document.getElementById('freelancesGrid');
